@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .suse-label {
+            font-family: "SUSE", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="font-family: Playpen Sans, cursive; text-align: center;">Edit your profile <i class="fa-solid fa-pencil"></i></h2>
+        <form>
+            <div class="input-group">
+                <div class="label">
+                    <label class="suse-label" for="name">Full Name</label>
+                </div>
+                <input type="text" name="fname" id="name" placeholder="eg: john dalton" required>
+            </div>
+            <div class="input-group">
+                <div class="label">
+                    <label class="suse-label" for="phone">Phone Number</label>
+                </div>
+                <input type="number" name="phone" id="phone" placeholder="+91 xxxxxxxxxx" required>
+            </div>
+            <div class="input-group">
+                <div class="label">
+                    <label class="suse-label" for="email">E-mail Address</label>
+                </div>
+                <input type="email" name="email" id="email" placeholder="eg: john@example.com" required>
+            </div>
+            <div class="input-group">
+                <div class="label">
+                    <label class="suse-label" for="passw">Change Password</label>
+                </div>
+                <input type="password" name="passw" id="passw" placeholder="choose strong password" required>
+                <button type="button" onclick="togglePassword()"><i id="password-btn" class="fa-solid fa-eye-slash"></i></button>
+            </div>
+            <button type="submit">Save Profile</button>
+        </form>
+    </div>
+</body>
+<script>
+    function togglePassword()
+    {
+        const passField = document.getElementById('passw');
+        const btn = document.getElementById('password-btn');
+        let attr = passField.getAttribute('type')
+        if(attr == 'password')
+        {
+            passField.setAttribute('type', 'text')
+            btn.classList.remove('fa-eye-slash')
+            btn.classList.add('fa-eye')
+        }
+        else if(attr == 'text')
+        {
+            passField.setAttribute('type', 'password')
+            btn.classList.remove('fa-eye')
+            btn.classList.add('fa-eye-slash')
+        }
+    }
+</script>
+</html>
