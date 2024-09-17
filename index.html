@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .suse-label {
             font-family: "SUSE", sans-serif;
@@ -17,15 +20,29 @@
             font-style: normal;
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <h2 style="font-family: Playpen Sans, cursive; text-align: center;">Edit your profile <i class="fa-solid fa-pencil"></i></h2>
         <form>
+            <h2 style="font-family: Playpen Sans, cursive;">Edit your profile <i
+            class="fa-solid fa-pencil"></i></h2>
+            <div class="input-group">
+                <div class="label">
+                    <label class="suse-label" for="dp">Choose Profile Picture</label>
+                </div>
+                <input type="file" accept="image/png, image/jpg, image/jpeg" name="dp" id="dp" multiple>
+            </div>
             <div class="input-group">
                 <div class="label">
                     <label class="suse-label" for="name">Full Name</label>
                 </div>
+                <select name="salutation" id="salutation">
+                    <option value="mr">Mr.</option>
+                    <option value="ms">Ms.</option>
+                    <option value="mrs">Mrs.</option>
+                </select>
                 <input type="text" name="fname" id="name" placeholder="eg: john dalton" required>
             </div>
             <div class="input-group">
@@ -45,30 +62,47 @@
                     <label class="suse-label" for="passw">Change Password</label>
                 </div>
                 <input type="password" name="passw" id="passw" placeholder="choose strong password" required>
-                <button type="button" onclick="togglePassword()"><i id="password-btn" class="fa-solid fa-eye-slash"></i></button>
+                <button type="button" onclick="togglePassword()"><i id="password-btn"
+                        class="fa-solid fa-eye-slash"></i></button>
             </div>
-            <button type="submit">Save Profile</button>
+            <div class="input-group">
+                <div class="label">
+                    <label class="suse-label" for="dob">Date of Birth</label>
+                </div>
+                <input type="date" min="2024-09-16" max="2024-09-18" name="dob" id="dob" required>
+            </div>
+            <div class="input-group">
+                <div class="label">
+                    <label class="suse-label" for="">Gender</label>
+                </div>
+                <input type="radio" name="gender" id="male" required> <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" required> <label for="female">Female</label>
+                <input type="radio" name="gender" id="other" required> <label for="other">Other</label>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" name="agree" id="agree" required>
+                <label for="agree">I agree to the <a href="#">Terms and Conditions</a> of the website</label>
+            </div>
+            <button type="submit" class="save">Save Profile</button>
         </form>
     </div>
 </body>
 <script>
-    function togglePassword()
-    {
+    function togglePassword() {
         const passField = document.getElementById('passw');
         const btn = document.getElementById('password-btn');
         let attr = passField.getAttribute('type')
-        if(attr == 'password')
-        {
+        if (attr == 'password') {
             passField.setAttribute('type', 'text')
             btn.classList.remove('fa-eye-slash')
             btn.classList.add('fa-eye')
         }
-        else if(attr == 'text')
-        {
+        else if (attr == 'text') {
             passField.setAttribute('type', 'password')
             btn.classList.remove('fa-eye')
             btn.classList.add('fa-eye-slash')
         }
     }
 </script>
+
 </html>
