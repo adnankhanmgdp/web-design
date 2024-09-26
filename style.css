@@ -1,3 +1,11 @@
+body{
+}
+
+img{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+}
 .container{
     width: 1000px;
     margin-left: auto;
@@ -27,3 +35,95 @@ form
     border: 2px solid greenyellow; 
     border-radius: 25px;
 }
+
+.container-2
+{
+    width: 50%;
+    margin: auto;
+}
+
+.container-2 p a
+{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.container-2 p a:visited
+{
+    color: green;
+}
+.container-2 p a:hover
+{
+    color: red;
+}
+
+p#new:hover
+{
+    text-transform:capitalize;
+}
+
+p#new::selection
+{
+    background-color: pink;
+    color: red
+}
+
+input:is(:-webkit-autofill, :autofill) {
+    border: 3px solid darkorange;
+  }
+
+  .dropdown
+  {
+    width: fit-content;
+    margin: 10px;
+    padding: 30px;
+    position: relative;
+  }
+  .dropdown > a
+  {
+    padding: 15px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+  }
+  .dropdown-content
+  {
+    display: none;
+    width: fit-content;
+    background-color: grey;
+    margin-left: 20px;
+    position: absolute;
+    margin-top: 10px;
+    z-index: 1;
+  }
+
+  .dropdown-content > ul
+  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropdown-content > ul a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .dropdown-content > ul li:hover{
+    color: white;
+    background-color: green;
+  }
+  .dropdown-content > ul li:hover a{
+    color: white;
+  }
+
+  .dropdown-content li
+  {
+    padding: 10px
+  }
+  .dropdown:hover .dropdown-content
+  {
+    display: block;
+  }
