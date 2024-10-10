@@ -3,123 +3,324 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Zoobidoo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <style>
-        .suse-label {
-            font-family: "SUSE", sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
+      h2
+      {
+        color: purple;
+      }
+      h2 {
+        font-family: "Lilita One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .zoo-mobile-carousel
+      {
+        display: none;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .lion-interview h2
+        {
+          text-align: center;
+          margin-top: 15px;
         }
+        .zoo-carousel
+        {
+          display: none;
+        }
+        .zoo-mobile-carousel
+        {
+          display: block;
+        }
+      }
+      .lion-interview p
+      {
+        text-align: justify;
+      }
     </style>
-    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>    
-    <div class="dropdown">
-        <a href="#">Menu</a>
-        <div class="dropdown-content">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Projects</a></li>
-            </ul>
+<body>
+    <!-- nav bar  -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #fff6c0 !important;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="lion-logo.png" width="40" height="40" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categories
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Birds</a></li>
+                      <li><a class="dropdown-item" href="#">Mammals</a></li>
+                      <li><a class="dropdown-item" href="#">Owl</a></li>
+                      <li><a class="dropdown-item" href="#">Aquatic</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-warning" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- carousel  -->
+    <section class="zoo-carousel">
+        <div id="home-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="zoo-carousel/1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="zoo-carousel/2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="zoo-carousel/3.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="zoo-carousel/4.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <!-- mobile carousel  -->
+    <section class="zoo-mobile-carousel">
+      <div id="home-carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="zoo-mobile-carousel/1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="zoo-mobile-carousel/2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="zoo-mobile-carousel/3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="zoo-mobile-carousel/4.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="zoo-mobile-carousel/5.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-    </div>
-    <div class="container">
-        <form>
-            <h2 style="font-family: Playpen Sans, cursive;">Edit your profile <i
-            class="fa-solid fa-pencil"></i></h2>
-            <div class="input-group">
-                <div class="label">
-                    <label class="suse-label" for="dp">Choose Profile Picture</label>
-                </div>
-                <input type="file" accept="image/png, image/jpg, image/jpeg" name="dp" id="dp" multiple>
+  </section>
+
+    <!-- fatured animals  -->
+    <section class="featured-animals">
+      <div class="container my-4">
+        <h2 class="text-center">Our Featured Animals</h2>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <div class="card" style="width: 98%">
+              <img src="zoo-featured/1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Lion</h5>
+                <p class="card-text">Lion is the King of Jungle and it has very postive attitude.</p>
+                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#lion-modal">Learn More</button>
+              </div>
             </div>
-            <div class="input-group">
-                <div class="label">
-                    <label class="suse-label" for="name">Full Name</label>
-                </div>
-                <select name="salutation" id="salutation">
-                    <option value="mr">Mr.</option>
-                    <option value="ms">Ms.</option>
-                    <option value="mrs">Mrs.</option>
-                </select>
-                <input type="text" name="fname" id="name" placeholder="eg: john dalton" required>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <div class="card" style="width: 98%">
+              <img src="zoo-featured/2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Jirrafe</h5>
+                <p class="card-text">Jirrafe is the tallest animal of the Jungle.</p>
+                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#giraffe-modal">Learn More</button>
+              </div>
             </div>
-            <div class="input-group">
-                <div class="label">
-                    <label class="suse-label" for="phone">Phone Number</label>
-                </div>
-                <input type="number" name="phone" id="phone" placeholder="+91 xxxxxxxxxx" required>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <div class="card" style="width: 98%">
+              <img src="zoo-featured/3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Whale</h5>
+                <p class="card-text">Whale is a mammal and it is the largest animal in the sea.</p>
+                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#whale-modal">Learn More</button>
+              </div>
             </div>
-            <div class="input-group">
-                <div class="label">
-                    <label class="suse-label" for="email">E-mail Address</label>
-                </div>
-                <input type="email" name="email" id="email" placeholder="eg: john@example.com" required>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <div class="card" style="width: 98%">
+              <img src="zoo-featured/4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Tiger</h5>
+                <p class="card-text">Tiger is the national animal of India and it is species of cat.</p>
+                <a href="#" class="btn btn-warning">Learn More</a>
+              </div>
             </div>
-            <div class="input-group">
-                <div class="label">
-                    <label class="suse-label" for="passw">Change Password</label>
-                </div>
-                <input type="password" name="passw" id="passw" placeholder="choose strong password" required>
-                <button type="button" onclick="togglePassword()"><i id="password-btn"
-                        class="fa-solid fa-eye-slash"></i></button>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <div class="card" style="width: 98%">
+              <img src="zoo-featured/5.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
-            <div class="input-group">
-                <div class="label">
-                    <label class="suse-label" for="dob">Date of Birth</label>
-                </div>
-                <input type="date" min="2024-09-16" max="2024-09-18" name="dob" id="dob" required>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <div class="card" style="width: 98%">
+              <img src="zoo-featured/6.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
-            <div class="input-group">
-                <div class="label">
-                    <label class="suse-label" for="">Gender</label>
-                </div>
-                <input type="radio" name="gender" id="male" required> <label for="male">Male</label>
-                <input type="radio" name="gender" id="female" required> <label for="female">Female</label>
-                <input type="radio" name="gender" id="other" required> <label for="other">Other</label>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <div class="card" style="width: 98%">
+              <img src="zoo-featured/7.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
-            <div class="input-group">
-                <input type="checkbox" name="agree" id="agree" required>
-                <label for="agree">I agree to the <a href="#">Terms and Conditions</a> of the website</label>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <div class="card" style="width: 98%;">
+              <img src="zoo-featured/8.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
-            <button type="submit" class="save">Save Profile</button>
-        </form>
-    </div>
-    <div class="container-2">
-        <p><a href="about.html">about page</a></p>
-    </div>
-    <p id="new">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt sequi minima aut nulla vero libero architecto accusamus suscipit autem quia ratione iure, ex nihil perferendis ullam dolore provident aliquid iusto a, dolores odio. Nam laudantium minima asperiores fugit, beatae non incidunt corporis. Ducimus fugiat, labore tempora ipsam dolorem tempore, ullam sunt mollitia commodi quidem perferendis et obcaecati rerum accusantium laboriosam harum. Voluptatum tenetur ducimus vel molestiae nobis! Quis libero sunt facere ut, harum iste voluptatum magni enim, minima qui aspernatur assumenda modi voluptatem dolor nostrum eius, vitae quae alias unde incidunt tempora repudiandae possimus a? Debitis esse culpa soluta quas?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- lion Interview  -->
+    <section class="lion-interview">
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <img src="zoo-featured/1.png" class="w-100 rounded-4" alt="">
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <h2>Interview of King</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati beatae suscipit natus? Eius iste delectus autem alias reprehenderit, modi aspernatur quisquam, soluta amet neque in. Dolorum modi nulla ratione dolores quaerat, incidunt atque. Aliquid quaerat quidem explicabo sit nostrum totam molestiae vero quod recusandae blanditiis consequatur amet quisquam architecto voluptates eveniet nam temporibus nobis pariatur reiciendis magnam, laboriosam id perferendis? Dolorem eum, libero in unde cumque qui enim fuga voluptates voluptatibus sapiente at itaque. Culpa itaque quisquam quia qui eum voluptates cum distinctio, ratione voluptas pariatur quibusdam illo totam unde esse similique iusto exercitationem hic magni animi impedit illum aperiam deserunt. Numquam, maxime velit minus sit nemo doloribus nam corrupti, perferendis illo expedita laudantium distinctio incidunt earum? Exercitationem quis fugiat aut? Ullam tempore qui, beatae veritatis atque facilis aliquid ipsa dolorem pariatur accusantium earum ut cum adipisci magnam quo dicta at ipsam. Dolorem at mollitia, est illo placeat corrupti veniam.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
+    <!-- modals  -->
+    <div class="modals">
+      <div class="lion-modal">
+        <div class="modal fade" id="lion-modal" tabindex="-1" aria-labelledby="lion" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="lion">Lion - King of Jungle</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                The lion (*Panthera leo*) is a large, powerful carnivorous mammal native to Africa and parts of Asia. Known as the "king of the jungle," lions live in social groups called prides, consisting of related females, their offspring, and a few adult males. Male lions are recognized by their impressive manes, while both sexes are known for their strength and hunting abilities. Lions are apex predators, often hunting in groups to take down large prey. They are a symbol of courage and strength in many cultures, but their populations are vulnerable due to habitat loss and human conflict.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="girrafe-modal">
+        <div class="modal fade" id="giraffe-modal" tabindex="-1" aria-labelledby="giraffe" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="giraffe">Girrafe - See the World Ahead Everyone</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                The giraffe (*Giraffa camelopardalis*) is the tallest land animal on Earth, native to the savannas and open woodlands of Africa. Known for its long neck and legs, a giraffe can reach heights of up to 18 feet (5.5 meters), allowing it to browse leaves from tall trees, especially acacias, that other herbivores cannot reach. Giraffes have distinct coat patterns of brown spots on a light background, which vary among subspecies. They live in loose social groups and communicate through body language and occasional sounds. Despite their size, giraffes are gentle and can run at speeds of up to 35 miles per hour (56 km/h). Giraffes face threats from habitat loss, poaching, and declining populations in the wild.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="whale-modal">
+        <div class="modal fade" id="whale-modal" tabindex="-1" aria-labelledby="whale" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="whale">Whale - The Mermaid of ocean</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Whales are large marine mammals belonging to the order Cetacea, which includes species like the blue whale, humpback whale, and sperm whale. They are known for their massive size, with the blue whale being the largest animal to ever exist, reaching lengths of up to 100 feet (30 meters) and weighing up to 200 tons. Whales are warm-blooded, breathe air through lungs, and give birth to live young, which they nurse with milk. They are divided into two main groups: baleen whales, which filter small organisms like krill through baleen plates, and toothed whales, which hunt larger prey like fish and squid. Whales communicate using complex vocalizations and can travel great distances during migrations. Unfortunately, many whale species are threatened by factors like whaling, pollution, and climate change.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 </body>
-<script>
-    function togglePassword() {
-        const passField = document.getElementById('passw');
-        const btn = document.getElementById('password-btn');
-        let attr = passField.getAttribute('type')
-        if (attr == 'password') {
-            passField.setAttribute('type', 'text')
-            btn.classList.remove('fa-eye-slash')
-            btn.classList.add('fa-eye')
-        }
-        else if (attr == 'text') {
-            passField.setAttribute('type', 'password')
-            btn.classList.remove('fa-eye')
-            btn.classList.add('fa-eye-slash')
-        }
-    }
-</script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </html>
