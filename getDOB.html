@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date of birth</title>
+    <style>
+        .container
+        {
+            width: 700px;
+            margin: auto;
+        }
+        .birthday
+        {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 10px 0px
+        }
+    </style>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Know your Day!</h2>
+        <form action="">
+            <div class="input-group">
+                <div class="label">
+                    <label for="dob">Enter your DOB:</label>
+                </div>
+                <div class="input" style="margin: 10px 0px">
+                    <input type="date" name="dob" id="dob">
+                </div>
+            </div>
+            <button onclick="getDay()" type="button">Get DAY</button>
+        </form>
+        <div class="birthday" id="birthday"></div>
+    </div>
+</body>
+</html>
