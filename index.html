@@ -25,7 +25,12 @@
       {
         display: none;
       }
-
+      #animalName
+      {
+        color: red;
+        font-size: 30px;
+        font-weight: bold;
+      }
       @media only screen and (max-width: 768px) {
         .lion-interview h2
         {
@@ -246,15 +251,18 @@
     </section>
 
     <!-- lion Interview  -->
+    <select class="d-block m-auto" id="animal">
+    </select>
+
     <section class="lion-interview">
       <div class="container my-5">
         <div class="row">
           <div class="col-md-6 col-sm-12">
-            <img src="zoo-featured/1.png" class="w-100 rounded-4" alt="">
+            <img src="zoo-featured/1.png" id="animalPic" class="w-100 rounded-4" alt="">
           </div>
           <div class="col-md-6 col-sm-12">
-            <h2>Interview of King</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati beatae suscipit natus? Eius iste delectus autem alias reprehenderit, modi aspernatur quisquam, soluta amet neque in. Dolorum modi nulla ratione dolores quaerat, incidunt atque. Aliquid quaerat quidem explicabo sit nostrum totam molestiae vero quod recusandae blanditiis consequatur amet quisquam architecto voluptates eveniet nam temporibus nobis pariatur reiciendis magnam, laboriosam id perferendis? Dolorem eum, libero in unde cumque qui enim fuga voluptates voluptatibus sapiente at itaque. Culpa itaque quisquam quia qui eum voluptates cum distinctio, ratione voluptas pariatur quibusdam illo totam unde esse similique iusto exercitationem hic magni animi impedit illum aperiam deserunt. Numquam, maxime velit minus sit nemo doloribus nam corrupti, perferendis illo expedita laudantium distinctio incidunt earum? Exercitationem quis fugiat aut? Ullam tempore qui, beatae veritatis atque facilis aliquid ipsa dolorem pariatur accusantium earum ut cum adipisci magnam quo dicta at ipsam. Dolorem at mollitia, est illo placeat corrupti veniam.</p>
+            <h2 id="animalHeading">Interview of King</h2>
+            <p id="animalText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati beatae suscipit natus? Eius iste delectus autem alias reprehenderit, modi aspernatur quisquam, soluta amet neque in. Dolorum modi nulla ratione dolores quaerat, incidunt atque. Aliquid quaerat quidem explicabo sit nostrum totam molestiae vero quod recusandae blanditiis consequatur amet quisquam architecto voluptates eveniet nam temporibus nobis pariatur reiciendis magnam, laboriosam id perferendis? Dolorem eum, libero in unde cumque qui enim fuga voluptates voluptatibus sapiente at itaque. Culpa itaque quisquam quia qui eum voluptates cum distinctio, ratione voluptas pariatur quibusdam illo totam unde esse similique iusto exercitationem hic magni animi impedit illum aperiam deserunt. Numquam, maxime velit minus sit nemo doloribus nam corrupti, perferendis illo expedita laudantium distinctio incidunt earum? Exercitationem quis fugiat aut? Ullam tempore qui, beatae veritatis atque facilis aliquid ipsa dolorem pariatur accusantium earum ut cum adipisci magnam quo dicta at ipsam. Dolorem at mollitia, est illo placeat corrupti veniam.</p>
           </div>
         </div>
       </div>
@@ -324,4 +332,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <script src="objects.js"></script>
 </html>
